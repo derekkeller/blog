@@ -1,0 +1,9 @@
+<h2>Listing of all the current users with an account</h2>
+
+	<ul>
+		<% @user.each do |user| %>
+			<li><%= user.email %></li>
+		<% end %>
+	</ul>
+	
+<%= link_to 'Back to articles', articles_path %>

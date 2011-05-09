@@ -1,0 +1,9 @@
+<%= render @article %>
+
+<%= link_to 'Back to articles', articles_path %>
+
+<h2>Comments</h2>
+<%= render @article.comments %>
+
+<%= render :file => 'comments/new' %>
+

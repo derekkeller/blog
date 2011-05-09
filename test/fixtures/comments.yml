@@ -1,0 +1,27 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  article_id: 1
+  name: MyString
+  email: MyString
+  body: MyText
+
+two:
+  article_id: 1
+  name: MyString
+  email: MyString
+  body: MyText
+
+# == Schema Information
+#
+# Table name: comments
+#
+#  id         :integer         not null, primary key
+#  article_id :integer
+#  name       :string(255)
+#  email      :string(255)
+#  body       :text
+#  created_at :datetime
+#  updated_at :datetime
+#
+
