@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
 
   def create
-    if @user.authenticate(params[:email], params[:password])
+    if user = User.authenticate(params[:email], params[:password])
       session[:user_id] = user.id
       redirect_to root_path, :notice => 'Logged in successfully'
     else
@@ -10,5 +10,9 @@ class SessionsController < ApplicationController
     end
   end
 
-
+  def destroy
+    reset_session
+    redirect_to 'login', :notice => "You successfully logged out"
+  end
+  
 end
