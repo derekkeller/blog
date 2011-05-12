@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
 
   def destroy
     reset_session
-    redirect_to 'login', :notice => "You successfully logged out"
+    redirect_to login_path, :notice => "You successfully logged out"
   end
   
 end

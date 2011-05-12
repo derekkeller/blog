@@ -7,9 +7,15 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
+	<div class="top_menu round">
+		Welcome <%= current_user.email %>!
+	</div>
 <p id="notice"><%= notice %></p>
 <p id="alert"><%= alert %></p>
-<%= yield %>
+
+	<div class="body_container round">
+		<%= yield %>
+	</div>
 
 </body>
 </html>
