@@ -1,6 +1,6 @@
 Blog::Application.routes.draw do
   
-  root :to => 'articles#index'
+  root :to => "sessions#new"
 
   resources :users
   resources :comments

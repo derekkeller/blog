@@ -8,12 +8,17 @@
 </head>
 <body>
 	<div class="top_menu round">
-		Welcome <%= current_user.email %>!
+		<% if current_user.present? %>
+			Welcome <%= current_user.email %>!
+			<%= link_to 'Logout', 'logout' %>
+		<% else %>
+			<%= link_to 'Login', 'login' %>
+			<%= link_to 'Sign up', new_user_path %>
+		<% end %>
 	</div>
-<p id="notice"><%= notice %></p>
-<p id="alert"><%= alert %></p>
-
 	<div class="body_container round">
+		<p id="notice"><%= notice %></p>
+		<p id="alert"><%= alert %></p>
 		<%= yield %>
 	</div>
 
